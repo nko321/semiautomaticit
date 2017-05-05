@@ -1,7 +1,7 @@
 #!/bin/bash
 # nkosetup.sh
 #
-# This script is intended to be run on any new Linux box. It installs a few
+# This script is intended to be run on any new Ubuntu box. It installs a few
 # programs and puts a few configurations in place.
 
 # Installing Software
@@ -36,6 +36,10 @@ sudo apt-get install \
 	firefox \
 	sshfs \
 	-y
+
+# Install updates.
+sudo apt-get update
+sudo apt-get upgrade -y
 
 # Copy a few good RC / Profile file into place. This vimrc comes from our
 # git repo.
