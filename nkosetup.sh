@@ -37,4 +37,4 @@ sudo apt-get install \
 	sshfs \
 	-y
 
-
+cp vimrc ~/.vimrc
