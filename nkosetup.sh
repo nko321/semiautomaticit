@@ -37,4 +37,8 @@ sudo apt-get install \
 	sshfs \
 	-y
 
+# Copy a good vimrc file into place. This vimrc comes from our git repo.
+echo "Copying vimrc..."
 cp vimrc ~/.vimrc
+
+echo "Done processing nkosetup.sh."
