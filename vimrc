@@ -1,3 +1,6 @@
+" vimrc
+" 
+# Added to ~ by nkosetup.sh.
 " Credit where credit is due:
 " https://dougblack.io/words/a-good-vimrc.html
 syntax enable		" enable syntax processing.
