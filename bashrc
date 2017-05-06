@@ -4,7 +4,10 @@
 # This file copied to ~/.bashrc by nkosetup.sh.
 
 # Create a folder / file for logging all commands entered in any bash session.
-mkdir -p ~/.logs
+if [[ ! -d ~/.logs ]]; then
+	echo "Creating directory ~/.logs"
+	mkdir -p ~/.logs
+fi
 
 # Command to ensure all commands are logged.
 # LOGIC:
