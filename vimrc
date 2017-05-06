@@ -15,4 +15,4 @@ set hlsearch		" highlight search hits.
 
 " turn off search highlight upon hitting spacebar.
 nnoremap <leader><space> :nohlsearch<CR>
-
+colorscheme slate
