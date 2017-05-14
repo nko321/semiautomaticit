@@ -4,5 +4,9 @@
 # is started.
 
 # Create transcript logs.
-if (!(ls $env:USERPROFILE\logs -EA SilentlyContinue)) {New-Item -Name logs -Path $env:USERPROFILE -ItemType directory}
+if (!(Get-ChildItem $env:USERPROFILE\logs -EA SilentlyContinue)) {New-Item -Name logs -Path $env:USERPROFILE -ItemType directory}
 Start-Transcript -Path "$env:USERPROFILE\logs\$(get-date -UFormat %Y-%m-%d).log" -Append -NoClobber
+
+function get-nkoOperatingSystem () {
+    return Get-WmiObject -class Win32_OperatingSystem -computername . | Select-Object Caption, OSArchitecture, ServicePackMajorVersion | Format-List
+}
